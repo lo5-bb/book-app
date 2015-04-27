@@ -1,0 +1,67 @@
+.typo {
+	p {
+		margin-bottom: 1.3em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-sans;
+		font-weight: 900;
+
+		margin: 1.414em 0 0.5em;
+		line-height: 1.2;
+	}
+
+	h1 {
+		font-size: 3.157em;
+	}
+
+	h2 {
+		font-size: 2.369em;
+	}
+
+	h3 {
+		font-size: 1.777em;
+	}
+
+	h4 {
+		font-size: 1.333em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	h6 {
+		font-size: .75em;
+	}
+
+	small,
+	.small {
+		font-size: 0.75em;
+	}
+
+	ol,
+	ul {
+		margin: 0 0 0.5em 2em;
+	}
+
+	hr {
+		height: 0;
+		border-top: 1px solid #eee;
+		margin: 3em 0;
+	}
+
+	pre {
+		font-family: Monaco,MonacoRegular,'Courier New',monospace;
+		background: #f0f0f0;
+		color: #333;
+		margin-bottom: (32/14) * 1em;
+		overflow-x: auto;
+		padding: 16px;
+		tab-size: 4;
+		letter-spacing: .2px;
+
+		font-size: 14px;
+		line-height: 1.8;
+	}
+}

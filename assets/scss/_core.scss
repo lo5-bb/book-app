@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	background: radial-gradient(ellipse at center, #fff 0%, #eee 100%);
+	background-size: cover;
+
+	font-family: $font-serif;
+	font-size: 17px;
+	line-height: 1.88235;
+	color: #36404e;
+
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.book-container {
+	max-width: 900px;
+	padding: 30px 30px;
+	margin: 0 auto;
+}
+
+.book {
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 60px;
+}

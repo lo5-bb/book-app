@@ -1,6 +1,7 @@
 .typo {
 	p {
 		margin-bottom: 1.3em;
+		text-align: justify;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -42,7 +43,16 @@
 
 	ol,
 	ul {
-		margin: 0 0 0.5em 2em;
+		margin: 0 0 1.3em 1em;
+
+		ul,
+		ol {
+			margin-bottom: 0;
+		}
+
+		li {
+			margin: 0 0 0 1em;
+		}
 	}
 
 	hr {
@@ -51,9 +61,18 @@
 		margin: 3em 0;
 	}
 
+	code {
+		padding: .2em .5em;
+		margin: 0;
+		font-size: 85%;
+		background-color: rgba(0,0,0,0.04);
+		border-radius: 3px;
+	}
+
 	pre {
-		font-family: Monaco,MonacoRegular,'Courier New',monospace;
-		background: #f0f0f0;
+		border-radius: 3px;
+		font-family: $font-monospaced;
+		background-color: rgba(0,0,0,0.04);
 		color: #333;
 		margin-bottom: (32/14) * 1em;
 		overflow-x: auto;
@@ -63,5 +82,35 @@
 
 		font-size: 14px;
 		line-height: 1.8;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	>img {
+		margin: 2em 0;
+	}
+
+	>img,
+	figure img {
+		display: block;
+		border-radius: 3px;
+	}
+
+	figure {
+		margin: 2em 0;
+
+		figcaption {
+			font-style: italic;
+			text-align: center;
+			margin: 10px 0 0 0;
+		}
+	}
+
+	blockquote {
+		font-style: italic;
+		padding-left: 2em;
+		border-left: 2px solid #36404e;
 	}
 }

@@ -19,9 +19,9 @@
 
 		<h1>Wstęp</h1>
 
-		<p>Internet jest obecnie używany za najważniejsze źródło informacji. Dlatego należy poznać dobrze narzędzia i metody umożliwiające właściwe jego wykorzystanie. Właśnie w tej publikacji, przeznaczonej dla uczniów V Liceum Ogólnokształcącego, staramy się przybliżyć wam narzędzia i metody, dzięki którym możecie być nie tylko biernymi odbiorcami informacji internetowych, ale także ich twórcami. Ta książka pozwoli wam zapoznać się z funkcjonowaniem jednej z najpopularniejszych usług internetowych. Czytając poszczególne rozdziały będziecie wprowadzani w kolejne etapy związane z technikami tworzenia stron WWW. Oczywiście samo czytanie nie wystarczy, zachęcamy do ćwiczeń w ramach zajęć prowadzonych w szkole, ale także do samodzielnej pracy.</p>
+		<p>Internet jest obecnie używany za najważniejsze źródło informacji. Dlatego należy poznać dobrze narzędzia i metody umożliwiające właściwe jego wykorzystanie. Właśnie w&nbsp;tej publikacji, przeznaczonej dla uczniów V Liceum Ogólnokształcącego, staramy się przybliżyć wam narzędzia i metody, dzięki którym możecie być nie tylko biernymi odbiorcami informacji internetowych, ale także ich twórcami. Ta książka pozwoli wam zapoznać się z fun&shy;kcjo&shy;no&shy;wa&shy;niem jednej z&nbsp;naj&shy;po&shy;pu&shy;lar&shy;niej&shy;szych usług internetowych. Czytając poszczególne rozdziały będziecie wpro&shy;wa&shy;dza&shy;ni w kolejne etapy związane z technikami tworzenia stron WWW. Oczywiście samo czytanie nie wystarczy, zachęcamy do ćwiczeń w ramach zajęć prowadzonych w&nbsp;szkole, ale także do sa&shy;mo&shy;dziel&shy;nej pracy.</p>
 
-		<p>Korzystając z tej publikacji oraz dostępu do szkolnego serwera możecie po- znawać i ćwiczyć zastosowanie kolejnych elementów używanych na stronach WWW. Zachęcamy do samodzielnej lektury i aktywnego udziału w zajęciach.</p>
+		<p>Korzystając z tej publikacji oraz dostępu do szkolnego serwera możecie poznawać i&nbsp;ćwiczyć zastosowanie kolejnych elementów używanych na stronach WWW. Zachęcamy do sa&shy;mo&shy;dziel&shy;nej lektury i aktywnego udziału w zajęciach.</p>
 
 		<h2>Makes Ben Hur look like an Epic!</h2>
 

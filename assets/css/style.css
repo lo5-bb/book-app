@@ -22,7 +22,9 @@ body {
   color: #36404e;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  widows: 3;
+  orphans: 3; }
   @media print {
     body {
       background: #fff;
@@ -58,7 +60,10 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
   margin: 1.414em 0 0.5em;
-  line-height: 1.2; }
+  line-height: 1.2;
+  -webkit-break-after: avoid;
+     -moz-break-after: avoid;
+          break-after: avoid; }
 .typo h1 {
   font-size: 3.157em; }
 .typo h2 {

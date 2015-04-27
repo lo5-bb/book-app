@@ -31,6 +31,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
+	widows: 3;
+	orphans: 3;
+
 	@media print {
 		background: #fff;
 		color: #000;

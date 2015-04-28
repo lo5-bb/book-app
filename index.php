@@ -20,7 +20,8 @@ require 'app.php';
 <div class="book-container">
 	<main class="book typo">
 
-		<?= app::getContent() ?>
+<?= app::getContent() ?>
+
 
 	</main>
 </div>

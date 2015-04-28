@@ -1,5 +1,13 @@
 .typo {
+
 	p {
+
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-o-hyphens: auto;
+		hyphens: auto;
+
 		margin-bottom: 1.3em;
 		text-align: justify;
 	}

@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>LO5 Książka</title>
+	<title>Typo test</title>
 	<meta name="viewport" content="initial-scale=1">
 	<link rel="stylesheet" href="assets/css/style.css"/>
 
@@ -17,11 +17,17 @@
 <div class="book-container">
 	<main class="book typo">
 
-		<h1>Wstęp</h1>
 
-		<p>Internet jest obecnie używany za najważniejsze źródło informacji. Dlatego należy poznać dobrze narzędzia i metody umożliwiające właściwe jego wykorzystanie. Właśnie w&nbsp;tej publikacji, przeznaczonej dla uczniów V Liceum Ogólnokształcącego, staramy się przybliżyć wam narzędzia i metody, dzięki którym możecie być nie tylko biernymi odbiorcami informacji internetowych, ale także ich twórcami. Ta książka pozwoli wam zapoznać się z fun&shy;kcjo&shy;no&shy;wa&shy;niem jednej z&nbsp;naj&shy;po&shy;pu&shy;lar&shy;niej&shy;szych usług internetowych. Czytając poszczególne rozdziały będziecie wpro&shy;wa&shy;dza&shy;ni w kolejne etapy związane z technikami tworzenia stron WWW. Oczywiście samo czytanie nie wystarczy, zachęcamy do ćwiczeń w ramach zajęć prowadzonych w&nbsp;szkole, ale także do sa&shy;mo&shy;dziel&shy;nej pracy.</p>
+		<h1>Sets The Cinema Back!</h1>
 
-		<p>Korzystając z tej publikacji oraz dostępu do szkolnego serwera możecie poznawać i&nbsp;ćwiczyć zastosowanie kolejnych elementów używanych na stronach WWW. Zachęcamy do sa&shy;mo&shy;dziel&shy;nej lektury i aktywnego udziału w zajęciach.</p>
+		<p>In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that means comfort.</p>
+
+
+		<p>This hobbit was a very well-to-do hobbit, and his name was Baggins. The Bagginses had lived in the neighbourhood of The Hill for time out of mind, and people considered them very respectable, not only because most of them were rich, but also because they never had any adventures or did anything unexpected: you could tell what a Baggins would say on any question without the bother of asking him. This is a story of how a Baggins had an adventure, found himself doing and saying things altogether unexpected. He may have lost the neighbours' respect, but he gained-well, you will see whether he gained anything in the end.</p>
+
+		<p>He hasn't got shit all over him. Well, we did do the nose. I am your king. Well, what do you want? I'm not a
+			witch. Camelot! Look, my liege! Well, I didn't vote for you. I'm not a witch. How do you know she
+			is a witch?</p>
 
 		<h2>Makes Ben Hur look like an Epic!</h2>
 

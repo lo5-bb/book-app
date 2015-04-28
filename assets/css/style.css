@@ -54,6 +54,11 @@ body {
   margin: 27mm 16mm 27mm 16mm; }
 
 .typo p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
   margin-bottom: 1.3em;
   text-align: justify; }
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6 {

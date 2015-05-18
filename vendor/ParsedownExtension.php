@@ -5,13 +5,14 @@ class Parsedown_Extension extends Parsedown
 	function __construct()
 	{
 		$this->BlockTypes['('] [] = 'Snippet';
+		$this->BlockTypes['/'] [] = 'Todo';
 	}
 
 	protected function blockSnippet($Excerpt)
 	{
 		$text = 'Zobacz na kod <strong>%s</strong>';
 
-		if (preg_match('/^\(code\s(3\.11)\)/', $Excerpt['text'], $matches)) {
+		if (preg_match('/^\(kod\s([0-9\.]+)\)/i', $Excerpt['text'], $matches)) {
 			return array(
 				'extent' => strlen($matches[0]),
 				'element' => array(
@@ -19,6 +20,23 @@ class Parsedown_Extension extends Parsedown
 					'text' => sprintf($text, $matches[1]),
 					'attributes' => array(
 						'class' => 'snippet',
+					),
+				),
+			);
+		}
+	}
+
+	protected function blockTodo($Excerpt) {
+		var_dump($Excerpt['text']);
+
+		if (preg_match('#^\/\/(\!)*?(.*)\s?(?:\(([\w\s]+)\))?\s*$#iuU', $Excerpt['text'], $matches)) {
+			return array(
+				'extent' => strlen($matches[0]),
+				'element' => array(
+					'name' => 'div',
+					'text' => $matches[2].(!empty($matches[3]) ? '<cite class="autor">'.$matches[3].'</cite>' : ''),
+					'attributes' => array(
+						'class' => 'todo'.(($matches[1] == '!') ? ' important' : '')
 					),
 				),
 			);

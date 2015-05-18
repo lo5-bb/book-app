@@ -89,11 +89,12 @@ body {
   .typo small, .typo .small {
     font-size: 0.75em; }
   .typo ol, .typo ul {
-    margin: 0 0 1.3em 1em; }
+    margin: 0 0 1.3em 1em;
+    text-align: justify; }
     .typo ol ul, .typo ol ol, .typo ul ul, .typo ul ol {
       margin-bottom: 0; }
     .typo ol li, .typo ul li {
-      margin: 0 0 0 1em; }
+      margin: 0 0 .5em 1em; }
   .typo hr {
     height: 0;
     border-top: 1px solid #eee;

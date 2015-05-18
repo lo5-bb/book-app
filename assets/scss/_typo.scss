@@ -176,6 +176,13 @@
 		font-style: italic;
 		padding-left: 2em;
 		border-left: 2px solid #36404e;
+		font-size: 16px;
+
+		p,
+		ul,
+		ol {
+			margin-bottom: .6em;
+		}
 	}
 
 	.snippet {
@@ -270,39 +277,52 @@
 		position: relative;
 		border-top: 1px solid #eee;
 		border-bottom: 1px solid #eee;
-		padding: 16px 16px 16px 100px;
+		padding: 20px 0 20px 80px;
 		margin: 3em 0;
 		color: #666;
+		font-style: normal;
+		break-inside: avoid;
+		font-family: $font-sans;
+		line-height: 1.5;
 
 		&>*:last-child {
 			margin-bottom: 0;
 		}
 
 		&:before {
+			content: attr(data-label);
+			display: block;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 8px;
+			break-after: avoid;
+		}
+
+		&:after {
 			content: '';
 			display: block;
 			position: absolute;
 			left: 16px;
-			top: 8px;
+			top: 12px;
 			font-size: 40px;
 			font-family: $font-icons;
 			font-style: normal;
 			color: rgba(0, 0, 0, .2);
 		}
 
-		&.warning:before {
+		&.warning:after {
 			content: '\e01c';
 		}
 
-		&.tip:before {
+		&.tip:after {
 			content: '\e076';
 		}
 
-		&.question:before {
+		&.question:after {
 			content: '\e019';
 		}
 
-		&.homework:before {
+		&.homework:after {
 			content: '\e013';
 		}
 	}

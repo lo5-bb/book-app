@@ -5,13 +5,11 @@ class Parsedown_Extension extends Parsedown
 	public function __construct()
 	{
 
-		var_dump($this->BlockTypes['>']);
 
 		$this->BlockTypes['('] [] = 'Snippet';
 		$this->BlockTypes['/'] [] = 'Todo';
 		array_unshift($this->BlockTypes['>'], 'SpecialQuote');
 
-		var_dump($this->BlockTypes['>']);
 	}
 
 	protected function blockSpecialQuote($Line)
@@ -32,9 +30,13 @@ class Parsedown_Extension extends Parsedown
 					'element' => array(
 						'name' => 'blockquote',
 						'handler' => 'lines',
-						'text' => (array)$matches[1],
+						'identified' => true,
+						'text' => array(
+							$matches[1],
+						),
 						'attributes' => array(
-							'class' => 'box '.$className
+							'class' => 'box '.$className,
+							'data-label' => $label
 						)
 					),
 				);

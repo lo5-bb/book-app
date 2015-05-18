@@ -27,7 +27,7 @@ body {
   orphans: 3; }
   @media print {
     body {
-      background: #fff;
+      background: transparent;
       color: #000; } }
 
 .book-container {
@@ -167,7 +167,10 @@ body {
   .typo blockquote {
     font-style: italic;
     padding-left: 2em;
-    border-left: 2px solid #36404e; }
+    border-left: 2px solid #36404e;
+    font-size: 16px; }
+    .typo blockquote p, .typo blockquote ul, .typo blockquote ol {
+      margin-bottom: .6em; }
   .typo .snippet {
     float: right;
     background: #eee;
@@ -234,28 +237,43 @@ body {
     position: relative;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    padding: 16px 16px 16px 100px;
+    padding: 20px 0 20px 80px;
     margin: 3em 0;
-    color: #666; }
+    color: #666;
+    font-style: normal;
+    -webkit-column-break-inside: avoid;
+       page-break-inside: avoid;
+            break-inside: avoid;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5; }
     .typo .box > *:last-child {
       margin-bottom: 0; }
     .typo .box:before {
+      content: attr(data-label);
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+      -webkit-break-after: avoid;
+         -moz-break-after: avoid;
+              break-after: avoid; }
+    .typo .box:after {
       content: '';
       display: block;
       position: absolute;
       left: 16px;
-      top: 8px;
+      top: 12px;
       font-size: 40px;
       font-family: 'Simple-Line-Icons';
       font-style: normal;
       color: rgba(0, 0, 0, 0.2); }
-    .typo .box.warning:before {
+    .typo .box.warning:after {
       content: '\e01c'; }
-    .typo .box.tip:before {
+    .typo .box.tip:after {
       content: '\e076'; }
-    .typo .box.question:before {
+    .typo .box.question:after {
       content: '\e019'; }
-    .typo .box.homework:before {
+    .typo .box.homework:after {
       content: '\e013'; }
 
 @font-face {

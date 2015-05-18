@@ -35,7 +35,7 @@ body {
 	orphans: 3;
 
 	@media print {
-		background: #fff;
+		background: transparent;
 		color: #000;
 	}
 }

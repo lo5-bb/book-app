@@ -2,6 +2,7 @@
 
 require 'vendor/Parsedown.php';
 require 'vendor/ParsedownExtra.php';
+require 'vendor/ParsedownExtension.php';
 
 class app {
 
@@ -52,7 +53,7 @@ class app {
 	 */
 	public static function parseMarkdown($data) {
 
-		$Parsedown = new Parsedown();
+		$Parsedown = new Parsedown_Extension();
 
 		return $Parsedown->text($data);
 	}

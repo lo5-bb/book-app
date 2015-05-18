@@ -220,3 +220,12 @@ body {
     @media print {
       .typo .todo {
         display: none; } }
+  .typo table {
+    margin: 3em 0;
+    border-collapse: collapse;
+    width: 100%; }
+    .typo table th {
+      background: rgba(0, 0, 0, 0.04); }
+    .typo table th, .typo table td {
+      border: 1px solid #ddd;
+      padding: 8px; }

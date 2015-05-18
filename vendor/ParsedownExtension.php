@@ -27,7 +27,6 @@ class Parsedown_Extension extends Parsedown
 	}
 
 	protected function blockTodo($Excerpt) {
-		var_dump($Excerpt['text']);
 
 		if (preg_match('#^\/\/(\!)*?(.*)\s?(?:\(([\w\s]+)\))?\s*$#iuU', $Excerpt['text'], $matches)) {
 			return array(

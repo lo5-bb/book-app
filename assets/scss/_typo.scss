@@ -263,4 +263,47 @@
 			padding: 8px;
 		}
 	}
+
+
+	.box {
+		border-left: none;
+		position: relative;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		padding: 16px 16px 16px 100px;
+		margin: 3em 0;
+		color: #666;
+
+		&>*:last-child {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 16px;
+			top: 8px;
+			font-size: 40px;
+			font-family: $font-icons;
+			font-style: normal;
+			color: rgba(0, 0, 0, .2);
+		}
+
+		&.warning:before {
+			content: '\e01c';
+		}
+
+		&.tip:before {
+			content: '\e076';
+		}
+
+		&.question:before {
+			content: '\e019';
+		}
+
+		&.homework:before {
+			content: '\e013';
+		}
+	}
 }

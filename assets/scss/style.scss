@@ -1,6 +1,8 @@
 $font-sans: 'Lato', sans-serif;
 $font-serif: 'PT Serif', serif;
 $font-monospaced: Monaco, MonacoRegular, 'Courier New', monospace;
+$font-icons: 'Simple-Line-Icons';
 
 @import 'core';
 @import 'typo';
+@import 'icons';

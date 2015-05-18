@@ -2,10 +2,50 @@
 
 class Parsedown_Extension extends Parsedown
 {
-	function __construct()
+	public function __construct()
 	{
+
+		var_dump($this->BlockTypes['>']);
+
 		$this->BlockTypes['('] [] = 'Snippet';
 		$this->BlockTypes['/'] [] = 'Todo';
+		array_unshift($this->BlockTypes['>'], 'SpecialQuote');
+
+		var_dump($this->BlockTypes['>']);
+	}
+
+	protected function blockSpecialQuote($Line)
+	{
+		$specialQuotes = array(
+			'tip' 			=> ['(?:CIEKAWOSTKA)', 		'Ciekawostka'],
+			'warning' 		=> ['(?:UWAGA)', 			'Uwaga!'],
+			'question' 		=> ['(?:POMY(?:Ś|S)L)', 	'Pomyśl'],
+			'homework' 		=> ['(?:ZADANIE)', 			'Zadanie'],
+		);
+
+		foreach($specialQuotes as $className=>$params) {
+
+			list($regExp, $label) = $params;
+
+			if (preg_match('/^>[ ]?'.$regExp.':[ ]?(.*)/i', $Line['text'], $matches)) {
+				$Block = array(
+					'element' => array(
+						'name' => 'blockquote',
+						'handler' => 'lines',
+						'text' => (array)$matches[1],
+						'attributes' => array(
+							'class' => 'box '.$className
+						)
+					),
+				);
+
+				return $Block;
+			}
+		}
+	}
+
+	protected function blockSpecialQuoteContinue($Line, array $Block) {
+		return parent::blockQuoteContinue($Line, $Block);
 	}
 
 	protected function blockSnippet($Excerpt)

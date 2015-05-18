@@ -4,22 +4,21 @@ class Parsedown_Extension extends Parsedown
 {
 	function __construct()
 	{
-		$this->InlineTypes['{'] []= 'ColoredText';
-
-		$this->inlineMarkerList .= '{';
+		$this->BlockTypes['('] [] = 'Snippet';
 	}
 
-	protected function inlineColoredText($Excerpt)
+	protected function blockSnippet($Excerpt)
 	{
-		if (preg_match('/^{c:([#\w]\w+)}([^{]+){\/c}/', $Excerpt['text'], $matches))
-		{
+		$text = 'Zobacz na kod <strong>%s</strong>';
+
+		if (preg_match('/^\(code\s(3\.11)\)/', $Excerpt['text'], $matches)) {
 			return array(
 				'extent' => strlen($matches[0]),
 				'element' => array(
-					'name' => 'span',
-					'text' => $matches[2],
+					'name' => 'div',
+					'text' => sprintf($text, $matches[1]),
 					'attributes' => array(
-						'style' => 'color: '.$matches[1],
+						'class' => 'snippet',
 					),
 				),
 			);

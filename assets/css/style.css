@@ -136,3 +136,8 @@ body {
   font-style: italic;
   padding-left: 2em;
   border-left: 2px solid #36404e; }
+.typo .snippet {
+  float: right;
+  background: #eee;
+  padding: 21px;
+  margin: .6em 0 .25em 2em; }

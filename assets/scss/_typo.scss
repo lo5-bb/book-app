@@ -187,11 +187,24 @@
 
 	.snippet {
 		float: right;
-		background: #eee;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
 		padding: 21px;
 		margin: .6em 0 .25em 2em;
-
+		line-height: 30px;
+		color: #666;
 		font-family: $font-sans;
+
+		&:before {
+			float: right;
+			content: '\e031';
+			font-family: $font-icons;
+			color: rgba(0, 0, 0, .4);
+			font-size: 30px;
+			vertical-align: middle;
+			margin: 0 0 0 16px;
+			font-weight: normal;
+		}
 	}
 
 	.todo {
@@ -275,8 +288,8 @@
 	.box {
 		border-left: none;
 		position: relative;
-		border-top: 1px solid #eee;
-		border-bottom: 1px solid #eee;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
 		padding: 20px 0 20px 80px;
 		margin: 3em 0;
 		color: #666;

@@ -190,17 +190,20 @@
 	.todo {
 		font-family: $font-sans;
 		position: absolute;
-		left: -300px;
+		right: -300px;
 		background: #fff;
 		padding: 12px 16px;
-		border: 1px solid #ccc;
-		background: #fff;
+		border: 1px solid #ddd;
 		border-radius: 3px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 		font-size: 15px;
 		width: 280px;
-		margin-top: -32px;
+		margin-top: -40px;
 		display: block;
 		line-height: 1.5;
+		border-left: 0;
+		box-shadow: inset 4px 0 0 0 #ddd;
 
 		&:before,
 		&:after {
@@ -209,29 +212,24 @@
 			width: 0;
 			height: 0;
 			border: 10px solid transparent;
-			border-left-color: #ccc;
+			border-right-color: #ddd;
 			position: absolute;
-			right: -20px;
-			top: 10px;
+			left: -20px;
+			top: 16px;
 		}
 
 		&:after {
-			border-left-color: #fff;
-			right: -19px;
+			border-right-color: #fff;
+			left: -15px;
 		}
 
 		&.important {
-			border: 1px solid #cc0000;
-			background: mix(#fff, #cc0000, 95%);
+			box-shadow: inset 4px 0 0 0 #cc0000;
 
-			&:before,
-			&:after {
-				border-left-color: darken(#cc0000, 5%);
+			&:before {
+				border-right-color: #cc0000;
 			}
 
-			&:after {
-				border-left-color: mix(#fff, #cc0000, 95%);
-			}
 		}
 
 		cite {

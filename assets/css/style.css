@@ -177,37 +177,37 @@ body {
   .typo .todo {
     font-family: 'Lato', sans-serif;
     position: absolute;
-    left: -300px;
+    right: -300px;
     background: #fff;
     padding: 12px 16px;
-    border: 1px solid #ccc;
-    background: #fff;
+    border: 1px solid #ddd;
     border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     font-size: 15px;
     width: 280px;
-    margin-top: -32px;
+    margin-top: -40px;
     display: block;
-    line-height: 1.5; }
+    line-height: 1.5;
+    border-left: 0;
+    box-shadow: inset 4px 0 0 0 #ddd; }
     .typo .todo:before, .typo .todo:after {
       content: '';
       display: block;
       width: 0;
       height: 0;
       border: 10px solid transparent;
-      border-left-color: #ccc;
+      border-right-color: #ddd;
       position: absolute;
-      right: -20px;
-      top: 10px; }
+      left: -20px;
+      top: 16px; }
     .typo .todo:after {
-      border-left-color: #fff;
-      right: -19px; }
+      border-right-color: #fff;
+      left: -15px; }
     .typo .todo.important {
-      border: 1px solid #cc0000;
-      background: #fcf2f2; }
-      .typo .todo.important:before, .typo .todo.important:after {
-        border-left-color: #b30000; }
-      .typo .todo.important:after {
-        border-left-color: #fcf2f2; }
+      box-shadow: inset 4px 0 0 0 #cc0000; }
+      .typo .todo.important:before {
+        border-right-color: #cc0000; }
     .typo .todo cite {
       display: block;
       text-align: right;

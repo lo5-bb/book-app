@@ -31,7 +31,7 @@ body {
       color: #000; } }
 
 .book-container {
-  max-width: 900px;
+  max-width: 875px;
   padding: 30px 30px;
   margin: 0 auto; }
   @media print {

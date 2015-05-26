@@ -4,14 +4,16 @@ require 'vendor/Parsedown.php';
 require 'vendor/ParsedownExtra.php';
 require 'vendor/ParsedownExtension.php';
 
-class app {
+class app
+{
 
 	/**
 	 * Zwraca listę plików md
 	 *
 	 * @return array
 	 */
-	public static function getFilesList() {
+	public static function getFilesList()
+	{
 		return glob('book/*.md');
 	}
 
@@ -20,12 +22,13 @@ class app {
 	 *
 	 * @return string
 	 */
-	public static function getFilesContent() {
+	public static function getFilesContent()
+	{
 		$files = self::getFilesList();
 		$data = '';
 
-		foreach($files as $file) {
-			$data .= trim(file_get_contents($file))."\n\n";
+		foreach ($files as $file) {
+			$data .= trim(file_get_contents($file)) . "\n\n";
 		}
 
 		return trim($data);
@@ -36,7 +39,8 @@ class app {
 	 *
 	 * @return string
 	 */
-	public static function getContent() {
+	public static function getContent()
+	{
 		//pobieramy tresc ksiazki
 		$data = self::getFilesContent();
 
@@ -51,7 +55,8 @@ class app {
 	 * @param $data
 	 * @return mixed
 	 */
-	public static function parseMarkdown($data) {
+	public static function parseMarkdown($data)
+	{
 
 		$Parsedown = new Parsedown_Extension();
 
@@ -64,11 +69,12 @@ class app {
 		return $text;
 	}
 
-	private static function formatSingleCharacters($str) {
+	private static function formatSingleCharacters($str)
+	{
 		static $charactersTable;
-		if ( ! isset($charactersTable)) {
+		if (!isset($charactersTable)) {
 			$charactersTable = array(
-				'/(\s)(z|i|a|o)\s/'			=> '$1$2&nbsp;'
+				'/(\s)(z|i|a|o)\s/' => '$1$2&nbsp;'
 			);
 		}
 
@@ -78,8 +84,7 @@ class app {
 	public static function formatCharacters($str)
 	{
 		static $quotesTable;
-		if ( ! isset($quotesTable))
-		{
+		if (!isset($quotesTable)) {
 			$quotesTable = array(
 				// nested smart quotes, opening and closing
 				// note that rules for grammar (English) allow only for two levels deep
@@ -88,32 +93,37 @@ class app {
 				// Note that in all cases, whitespace is the primary determining factor
 				// on which direction to curl, with non-word characters like punctuation
 				// being a secondary factor only after whitespace is addressed.
-				'/\'"(\s|$)/'					=> '&#8217;&#8221;$1',
-				'/(^|\s|<p>)\'"/'				=> '$1&#8216;&#8222;',
-				'/\'"(\W)/'						=> '&#8217;&#8221;$1',
-				'/(\W)\'"/'						=> '$1&#8216;&#8222;',
-				'/"\'(\s|$)/'					=> '&#8221;&#8217;$1',
-				'/(^|\s|<p>)"\'/'				=> '$1&#8222;&#8216;',
-				'/"\'(\W)/'						=> '&#8221;&#8217;$1',
-				'/(\W)"\'/'						=> '$1&#8222;&#8216;',
+				'/\'"(\s|$)/' => '&#8217;&#8221;$1',
+				'/(^|\s|<p>)\'"/' => '$1&#8216;&#8222;',
+				'/\'"(\W)/' => '&#8217;&#8221;$1',
+				'/(\W)\'"/' => '$1&#8216;&#8222;',
+				'/"\'(\s|$)/' => '&#8221;&#8217;$1',
+				'/(^|\s|<p>)"\'/' => '$1&#8222;&#8216;',
+				'/"\'(\W)/' => '&#8221;&#8217;$1',
+				'/(\W)"\'/' => '$1&#8222;&#8216;',
 				// single quote smart quotes
-				'/\'(\s|$)/'					=> '&#8217;$1',
-				'/(^|\s|<p>)\'/'				=> '$1&#8216;',
-				'/\'(\W)/'						=> '&#8217;$1',
-				'/(\W)\'/'						=> '$1&#8216;',
+				'/\'(\s|$)/' => '&#8217;$1',
+				'/(^|\s|<p>)\'/' => '$1&#8216;',
+				'/\'(\W)/' => '&#8217;$1',
+				'/(\W)\'/' => '$1&#8216;',
 				// double quote smart quotes
-				'/"(\s|$)/'						=> '&#8221;$1',
-				'/(^|\s|<p>)"/'					=> '$1&#8222;',
-				'/"(\W)/'						=> '&#8221;$1',
-				'/(\W)"/'						=> '$1&#8222;',
+				'/"(\s|$)/' => '&#8221;$1',
+				'/(^|\s|<p>)"/' => '$1&#8222;',
+				'/"(\W)/' => '&#8221;$1',
+				'/(\W)"/' => '$1&#8222;',
 				// apostrophes
-				"/(\w)'(\w)/"					=> '$1&#8217;$2',
+				"/(\w)'(\w)/" => '$1&#8217;$2',
 				// Em dash and ellipses dots
-				'/(\w)\-\-(\w)/'					=> '$1&#8212;$2',
-				'/(\s)\-\-(\s)/'					=> '$1&#8212;$2',
-				'/(\w)\.{3}/'					=> '$1&#8230;',
+				'/(\w)\-\-(\w)/' => '$1&#8212;$2',
+				'/(\s)\-\-(\s)/' => '$1&#8212;$2',
+				'/(\w)\.{3}/' => '$1&#8230;',
 			);
 		}
 		return preg_replace(array_keys($quotesTable), $quotesTable, $str);
+	}
+
+	public static function generateTOC($code)
+	{
+		return '';
 	}
 }

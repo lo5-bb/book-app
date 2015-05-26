@@ -20,10 +20,13 @@ require 'app.php';
 <div class="book-container">
 	<main class="book typo">
 
-<?= app::getContent() ?>
+		<?= $html = app::getContent() ?>
 
 
 	</main>
+	<aside>
+		<?= app::generateTOC($html) ?>
+	</aside>
 </div>
 
 </body>

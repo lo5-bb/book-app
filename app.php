@@ -28,7 +28,9 @@ class app
 		$data = '';
 
 		foreach ($files as $file) {
-			$data .= trim(file_get_contents($file)) . "\n\n";
+			$fileData = trim(file_get_contents($file));
+			$html = self::parseMarkdown($fileData);
+			$data .= '<section class="chapter">'.$html.'</section>'. "\n\n";
 		}
 
 		return trim($data);
@@ -43,8 +45,6 @@ class app
 	{
 		//pobieramy tresc ksiazki
 		$data = self::getFilesContent();
-
-		$data = self::parseMarkdown($data);
 
 		return $data;
 	}

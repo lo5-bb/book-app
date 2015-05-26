@@ -53,14 +53,20 @@ body {
 	}
 }
 
-.book {
+.chapter {
 	background: #fff;
 	border: 1px solid #ddd;
 	padding: 16mm;
+	margin: 0 0 128px;
+
+	&>:first-child {
+		margin-top: 0;
+	}
 
 	@media print {
 		border: 0;
 		padding: 0;
+		margin: 0;
 	}
 }
 

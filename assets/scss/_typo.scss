@@ -103,10 +103,11 @@
 
 		code {
 			background: transparent;
-			padding: 0;
+			padding: 0 50px 0 0;
 			font-size: 100%;
 			border-radius: 0;
 			display: block;
+			word-wrap: break-word;
 
 			&.language-html,
 			&.language-css {

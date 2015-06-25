@@ -62,7 +62,7 @@ class app
 
 		$text = $data;
 
-		$text = self::formatCharacters($text);
+		//$text = self::formatCharacters($text);
 		$text = $Parsedown->text($text);
 		$text = self::formatSingleCharacters($text);
 

@@ -33,7 +33,12 @@ class app
 			$data .= '<section class="chapter">'.$html.'</section>'. "\n\n";
 		}
 
-		return trim($data);
+		$menu = self::generateTOC($data);
+
+		return array(
+			'html' => $data,
+			'menu' => $menu
+		);
 	}
 
 	/**
@@ -124,6 +129,6 @@ class app
 
 	public static function generateTOC($code)
 	{
-		return '';
+		return array();
 	}
 }

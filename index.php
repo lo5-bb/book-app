@@ -1,5 +1,6 @@
 <?
 require 'app.php';
+$data = app::getContent();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -18,15 +19,15 @@ require 'app.php';
 <body>
 
 <div class="book-container">
+	<aside>
+		<?= var_dump($data['menu']) ?>
+	</aside>
 	<main class="book typo">
 
-		<?= $html = app::getContent() ?>
-
+		<?= $data['html'] ?>
 
 	</main>
-	<aside>
-		<?= app::generateTOC($html) ?>
-	</aside>
+
 </div>
 
 </body>

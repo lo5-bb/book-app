@@ -28,7 +28,7 @@ class app
 		$data = '';
 
 		foreach ($files as $file) {
-			$fileData = trim(file_get_contents($file));
+			$fileData = '  '.trim(file_get_contents($file)).'  ';
 			$html = self::parseMarkdown($fileData);
 			$data .= '<section class="chapter">'.$html.'</section>'. "\n\n";
 		}

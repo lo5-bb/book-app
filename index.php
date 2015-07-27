@@ -27,7 +27,7 @@ $data = app::getContent();
 			<h1>Menu</h1>
 			<ul>
 				<? foreach($data['menu'] as $item): ?>
-					<li><?= $item['no'] ?> - <?= $item['text'] ?></li>
+					<li><a href="#<?= $item['url'] ?>"><?= $item['no'] ?> - <?= $item['text'] ?></a></li>
 				<? endforeach; ?>
 			</ul>
 		</section>

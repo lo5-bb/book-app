@@ -135,7 +135,8 @@ class app
 			for($i=0; $i<count($m[0]); $i++) {
 				$headers[] = [
 					'no' => $m[1][$i],
-					'text' => $m[2][$i]
+					'text' => $m[2][$i],
+					'url' => md5($m[2][$i])
 				];
 			}
 		}

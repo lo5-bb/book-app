@@ -129,6 +129,17 @@ class app
 
 	public static function generateTOC($code)
 	{
-		return array();
+		$headers = array();
+
+		if(preg_match_all('/<h([1-6])>(.*?)<\/h\\1>/si', $code, $m)) {
+			for($i=0; $i<count($m[0]); $i++) {
+				$headers[] = [
+					'no' => $m[1][$i],
+					'text' => $m[2][$i]
+				];
+			}
+		}
+
+		return $headers;
 	}
 }

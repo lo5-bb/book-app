@@ -17,11 +17,16 @@ $data = app::getContent();
 
 </head>
 <body>
+<aside>
+	<ul>
+		<? foreach($data['menu'] as $item): ?>
+			<li><?= $item['no'] ?> - <?= $item['text'] ?></li>
+		<? endforeach; ?>
+	</ul>
+</aside>
 
 <div class="book-container">
-	<aside>
-		<?= var_dump($data['menu']) ?>
-	</aside>
+
 	<main class="book typo">
 
 		<?= $data['html'] ?>

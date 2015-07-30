@@ -103,11 +103,12 @@
 
 		code {
 			background: transparent;
-			padding: 0 50px 0 0;
+			padding: 0 0 0 0;
+			word-wrap: break-word;
+			white-space: pre-wrap;
 			font-size: 100%;
 			border-radius: 0;
 			display: block;
-			word-wrap: break-word;
 
 			&.language-html,
 			&.language-css {
@@ -472,5 +473,6 @@
 	p {
 		margin-top: 1em;
 		margin-bottom: 1em;
+		text-align: left;
 	}
 }

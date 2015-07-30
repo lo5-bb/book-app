@@ -309,7 +309,14 @@ aside {
     font-family: 'Lato', sans-serif;
     padding: 3px;
     border-radius: 3px;
-    color: #666; }
+    color: #666;
+    margin: 0 128px; }
+  .typo .browser-left, .typo .browser-right {
+    float: left;
+    padding: 3px;
+    height: 32px; }
+  .typo .browser-right {
+    float: right; }
   .typo .browser-url-world {
     background: url(../svg/world.svg) no-repeat center;
     width: 26px;
@@ -322,9 +329,40 @@ aside {
     height: 26px;
     float: right;
     margin-left: 8px; }
+  .typo .browser-prev {
+    background: url(../svg/prev.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left; }
+  .typo .browser-next {
+    background: url(../svg/next.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left; }
+  .typo .browser-refresh {
+    background: url(../svg/refresh.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left; }
+  .typo .browser-mini {
+    background: url(../svg/mini.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left; }
+  .typo .browser-maxi {
+    background: url(../svg/maxi.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left; }
+  .typo .browser-close {
+    background: url(../svg/close.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left; }
   .typo .browser-content {
     background: #fff;
-    min-height: 150px; }
+    min-height: 150px;
+    padding: 10px; }
 
 @font-face {
   font-family: 'Simple-Line-Icons';

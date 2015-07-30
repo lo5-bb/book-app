@@ -5,7 +5,7 @@
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<g>
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M4,5.5v13h16v-13H4z M18,16.5H6v-9h12V16.5z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M4,5.5v13h16v-13H4z M18,16.5H6v-9h12V16.5z" fill="#afafaf"/>
 	</g>
 </g>
 </svg>

@@ -17,6 +17,10 @@ class app
 		return glob('book/*.md');
 	}
 
+	private static function getCodeUrl($code) {
+		return 'code.lo5.bielsko.pl/'.$code;
+	}
+
 	/**
 	 * Zwraca treść całej ksiązki
 	 *
@@ -31,6 +35,7 @@ class app
 			$fileData = '  ' . trim(file_get_contents($file)) . '  ';
 			$html = self::parseMarkdown($fileData);
 			$html = self::generateHeaders($html);
+			$html = self::generateBrowser($html);
 			$data .= '<section class="chapter">' . $html . '</section>' . "\n\n";
 		}
 
@@ -148,6 +153,15 @@ class app
 		$code = preg_replace_callback('/<h([1-6])>(.*?)<\/h\\1>/si', function($m){
 			return '<h'.$m[1].' id="'.self::urlTitle($m[2]).'">'.$m[2].'</h'.$m[1].'>';
 		}, $code);
+
+		return $code;
+	}
+
+	private static function generateBrowser($code) {
+
+		$code = preg_replace('/<browser\s+url=(["\'])([^"]+)\\1>/', '<div class="browser" id="code-$2"><div class="browser-top"><div class="browser-url"><div class="browser-url-world"></div><div class="browser-url-hamburger"></div>'.self::getCodeUrl('$2').'</div></div><div class="browser-content">', $code);
+		$code = preg_replace('/<\/browser>/', "</div>\n</div>", $code);
+
 
 		return $code;
 	}

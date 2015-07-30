@@ -296,6 +296,35 @@ aside {
       content: '\e019'; }
     .typo .box.homework:after {
       content: '\e013'; }
+  .typo .browser {
+    background: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 1.3em;
+    padding: 3px; }
+  .typo .browser-top {
+    padding: 7px; }
+  .typo .browser-url {
+    background: #fff;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    padding: 3px;
+    border-radius: 3px;
+    color: #666; }
+  .typo .browser-url-world {
+    background: url(../svg/world.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin-right: 8px; }
+  .typo .browser-url-hamburger {
+    background: url(../svg/hamburger.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    float: right;
+    margin-left: 8px; }
+  .typo .browser-content {
+    background: #fff;
+    min-height: 150px; }
 
 @font-face {
   font-family: 'Simple-Line-Icons';

@@ -333,32 +333,32 @@ aside {
     background: url(../svg/prev.svg) no-repeat center;
     width: 26px;
     height: 26px;
-    float: left; }
+    display: inline-block; }
   .typo .browser-next {
     background: url(../svg/next.svg) no-repeat center;
     width: 26px;
     height: 26px;
-    float: left; }
+    display: inline-block; }
   .typo .browser-refresh {
     background: url(../svg/refresh.svg) no-repeat center;
     width: 26px;
     height: 26px;
-    float: left; }
+    display: inline-block; }
   .typo .browser-mini {
     background: url(../svg/mini.svg) no-repeat center;
     width: 26px;
     height: 26px;
-    float: left; }
+    display: inline-block; }
   .typo .browser-maxi {
     background: url(../svg/maxi.svg) no-repeat center;
     width: 26px;
     height: 26px;
-    float: left; }
+    display: inline-block; }
   .typo .browser-close {
     background: url(../svg/close.svg) no-repeat center;
     width: 26px;
     height: 26px;
-    float: left; }
+    display: inline-block; }
   .typo .browser-content {
     background: #fff;
     min-height: 150px;

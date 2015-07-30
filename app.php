@@ -31,12 +31,13 @@ class app
 		$files = self::getFilesList();
 		$data = '';
 
+		$i = 1;
 		foreach ($files as $file) {
 			$fileData = '  ' . trim(file_get_contents($file)) . '  ';
 			$html = self::parseMarkdown($fileData);
 			$html = self::generateHeaders($html);
 			$html = self::generateBrowser($html);
-			$data .= '<section class="chapter">' . $html . '</section>' . "\n\n";
+			$data .= '<section class="chapter"><div class="chapter-no">'.$i++.'</div>' . $html . '</section>' . "\n\n";
 		}
 
 		$menu = self::generateTOC($data);

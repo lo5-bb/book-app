@@ -46,13 +46,26 @@ body {
   border: 1px solid #ddd;
   padding: 16mm;
   margin: 0 0 128px; }
-  .chapter > :first-child, .menu > :first-child {
-    margin-top: 0; }
   @media print {
     .chapter, .menu {
       border: 0;
       padding: 0;
       margin: 0; } }
+
+.chapter-no {
+  background: #36404e;
+  color: #fff;
+  string-set: chapter content();
+  width: 3cm;
+  height: 3cm;
+  line-height: 3cm;
+  margin: 0 auto 5cm;
+  border-radius: 50%;
+  font-size: 1.7cm;
+  text-align: center; }
+  @media print {
+    .chapter-no {
+      background: #000; } }
 
 aside {
   float: left; }
@@ -82,7 +95,7 @@ aside {
 
 .typo {
   position: relative; }
-  .typo > *:first-child {
+  .typo h1:first-of-type {
     margin-top: 0; }
   .typo p {
     -webkit-hyphens: auto;

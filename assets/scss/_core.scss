@@ -61,14 +61,27 @@ body {
 	padding: 16mm;
 	margin: 0 0 128px;
 
-	&>:first-child {
-		margin-top: 0;
-	}
-
 	@media print {
 		border: 0;
 		padding: 0;
 		margin: 0;
+	}
+}
+
+.chapter-no {
+	background: #36404e;
+	color: #fff;
+	string-set: chapter content();
+	width: 3cm;
+	height: 3cm;
+	line-height: 3cm;
+	margin: 0 auto 5cm;
+	border-radius: 50%;
+	font-size: 1.7cm;
+	text-align: center;
+
+	@media print {
+		background: #000;
 	}
 }
 

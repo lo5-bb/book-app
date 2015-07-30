@@ -299,8 +299,9 @@ aside {
   .typo .browser {
     background: #f0f0f0;
     border-radius: 5px;
-    margin-bottom: 1.3em;
-    padding: 3px; }
+    margin: 0 2em 2em;
+    padding: 3px;
+    page-break-inside: avoid; }
   .typo .browser-top {
     padding: 7px; }
   .typo .browser-url {
@@ -363,6 +364,28 @@ aside {
     background: #fff;
     min-height: 150px;
     padding: 10px; }
+
+.browser-content {
+  color: #000;
+  font-family: 'Times New Roman', serif;
+  font-size: 14px;
+  line-height: normal; }
+  .browser-content h1, .browser-content h2, .browser-content h3, .browser-content h4, .browser-content h5, .browser-content h6 {
+    font-family: inherit;
+    font-weight: bold; }
+  .browser-content h1 {
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em; }
+  .browser-content h2 {
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em; }
+  .browser-content h3 {
+    font-size: 1.17em; }
+  .browser-content p {
+    margin-top: 1em;
+    margin-bottom: 1em; }
 
 @font-face {
   font-family: 'Simple-Line-Icons';

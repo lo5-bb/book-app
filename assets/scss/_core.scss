@@ -37,6 +37,7 @@ body {
 	@media print {
 		background: transparent;
 		color: #000;
+		font-size: 12pt;
 	}
 }
 
@@ -79,4 +80,25 @@ aside {
 @page {
 	size: 210mm 297mm;
 	margin: 27mm 16mm 27mm 16mm;
+}
+
+@page  {
+	@bottom-center {
+		content: counter(page);
+		vertical-align: middle;
+		margin: 0.8em 0;
+		font-size: 10pt;
+	}
+}
+
+@page clean {
+	@bottom-center { content: normal }
+}
+
+.menu {
+	page: clean;
+}
+
+.chapter {
+	page-break-before: right;
 }

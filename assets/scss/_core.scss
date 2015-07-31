@@ -24,20 +24,20 @@ body {
 
 	font-family: $font-serif;
 	font-size: 17px;
-	line-height: 1.88235;
+	line-height: 1.75;
 	color: #36404e;
 
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	widows: 3;
-	orphans: 3;
+	widows: 2;
+	orphans: 2;
 
 	@media print {
 		background: transparent;
 		color: #000;
-		font-size: 12pt;
+		font-size: 11pt;
 	}
 }
 
@@ -68,22 +68,6 @@ body {
 	}
 }
 
-.chapter-no {
-	background: #36404e;
-	color: #fff;
-	string-set: chapter content();
-	width: 3cm;
-	height: 3cm;
-	line-height: 3cm;
-	margin: 0 auto 5cm;
-	border-radius: 50%;
-	font-size: 1.7cm;
-	text-align: center;
-
-	@media print {
-		background: #000;
-	}
-}
 
 aside {
 	float: left;
@@ -91,12 +75,25 @@ aside {
 }
 
 @page {
-	size: 210mm 297mm;
-	margin: 27mm 16mm 27mm 16mm;
+	size: C5;
+	margin: 22mm 16mm 22mm 16mm;
+	//marks: crop cross;
+	//prince-bleed: 3mm;
+	//prince-mark-length: 6mm;
+	//prince-mark-offset: 6mm;
 }
 
-@page  {
-	@bottom-center {
+@page:left {
+	@bottom-left {
+		content: counter(page);
+		vertical-align: middle;
+		margin: 0.8em 0;
+		font-size: 10pt;
+	}
+}
+
+@page:right {
+	@bottom-right {
 		content: counter(page);
 		vertical-align: middle;
 		margin: 0.8em 0;

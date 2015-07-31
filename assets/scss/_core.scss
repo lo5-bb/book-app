@@ -76,7 +76,6 @@ aside {
 
 @page {
 	size: C5;
-	margin: 22mm 16mm 22mm 16mm;
 	//marks: crop cross;
 	//prince-bleed: 3mm;
 	//prince-mark-length: 6mm;
@@ -84,6 +83,8 @@ aside {
 }
 
 @page:left {
+	margin: 16mm 26mm 16mm 16mm;
+
 	@bottom-left {
 		content: counter(page);
 		vertical-align: middle;
@@ -93,6 +94,8 @@ aside {
 }
 
 @page:right {
+	margin: 16mm 16mm 16mm 26mm;
+
 	@bottom-right {
 		content: counter(page);
 		vertical-align: middle;

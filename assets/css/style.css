@@ -56,10 +56,10 @@ aside {
   float: left; }
 
 @page {
-  size: C5;
-  margin: 22mm 16mm 22mm 16mm; }
+  size: C5; }
 
 @page :left {
+  margin: 16mm 26mm 16mm 16mm;
   @bottom-left {
     content: counter(page);
     vertical-align: middle;
@@ -68,6 +68,7 @@ aside {
  }
 
 @page :right {
+  margin: 16mm 16mm 16mm 26mm;
   @bottom-right {
     content: counter(page);
     vertical-align: middle;
@@ -147,8 +148,8 @@ aside {
          tab-size: 4;
     letter-spacing: .2px;
     position: relative;
-    font-size: 14px;
-    line-height: 1.8; }
+    font-size: .85em;
+    line-height: 1.5; }
     .typo pre code {
       background: transparent;
       padding: 0 0 0 0;
@@ -189,7 +190,7 @@ aside {
     font-style: italic;
     padding-left: 2em;
     border-left: 2px solid #36404e;
-    font-size: 16px; }
+    font-size: 1em; }
     .typo blockquote p, .typo blockquote ul, .typo blockquote ol {
       margin-bottom: .6em; }
   .typo .snippet {

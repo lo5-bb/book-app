@@ -18,18 +18,18 @@ body {
   background-attachment: fixed;
   font-family: 'PT Serif', serif;
   font-size: 17px;
-  line-height: 1.88235;
+  line-height: 1.75;
   color: #36404e;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  widows: 3;
-  orphans: 3; }
+  widows: 2;
+  orphans: 2; }
   @media print {
     body {
       background: transparent;
       color: #000;
-      font-size: 12pt; } }
+      font-size: 11pt; } }
 
 .book-container {
   max-width: 875px;
@@ -52,30 +52,24 @@ body {
       padding: 0;
       margin: 0; } }
 
-.chapter-no {
-  background: #36404e;
-  color: #fff;
-  string-set: chapter content();
-  width: 3cm;
-  height: 3cm;
-  line-height: 3cm;
-  margin: 0 auto 5cm;
-  border-radius: 50%;
-  font-size: 1.7cm;
-  text-align: center; }
-  @media print {
-    .chapter-no {
-      background: #000; } }
-
 aside {
   float: left; }
 
 @page {
-  size: 210mm 297mm;
-  margin: 27mm 16mm 27mm 16mm; }
+  size: C5; }
 
-@page {
-  @bottom-center {
+@page :left {
+  margin: 16mm 26mm 16mm 16mm;
+  @bottom-left {
+    content: counter(page);
+    vertical-align: middle;
+    margin: 0.8em 0;
+    font-size: 10pt; }
+ }
+
+@page :right {
+  margin: 16mm 16mm 16mm 26mm;
+  @bottom-right {
     content: counter(page);
     vertical-align: middle;
     margin: 0.8em 0;
@@ -114,18 +108,14 @@ aside {
        -moz-break-after: avoid;
             break-after: avoid; }
   .typo h1 {
-    margin-top: 3em;
-    font-size: 3.157em; }
-  .typo h2 {
+    margin-top: 0;
     font-size: 2.369em; }
-  .typo h3 {
+  .typo h2 {
     font-size: 1.777em; }
-  .typo h4 {
+  .typo h3 {
     font-size: 1.333em; }
-  .typo h5 {
+  .typo h4 {
     font-size: 1em; }
-  .typo h6 {
-    font-size: .75em; }
   .typo small, .typo .small {
     font-size: 0.75em; }
   .typo ol, .typo ul {
@@ -158,8 +148,8 @@ aside {
          tab-size: 4;
     letter-spacing: .2px;
     position: relative;
-    font-size: 14px;
-    line-height: 1.8; }
+    font-size: .85em;
+    line-height: 1.5; }
     .typo pre code {
       background: transparent;
       padding: 0 0 0 0;
@@ -179,17 +169,6 @@ aside {
         padding: 8px 16px 8px 8px;
         font-family: 'Lato', sans-serif;
         font-weight: 700; }
-      .typo pre code.language-html:after, .typo pre code.language-css:after {
-        display: block;
-        content: '';
-        width: 0;
-        height: 0;
-        border: 4px solid transparent;
-        border-bottom-color: #ccc;
-        border-left-color: #ccc;
-        position: absolute;
-        top: 8px;
-        right: -8px; }
       .typo pre code.language-css:before {
         content: 'CSS'; }
       .typo pre code.language-html:before {
@@ -211,7 +190,7 @@ aside {
     font-style: italic;
     padding-left: 2em;
     border-left: 2px solid #36404e;
-    font-size: 16px; }
+    font-size: 1em; }
     .typo blockquote p, .typo blockquote ul, .typo blockquote ol {
       margin-bottom: .6em; }
   .typo .snippet {
@@ -398,6 +377,24 @@ aside {
     background: #fff;
     min-height: 150px;
     padding: 10px; }
+  .typo .chapter-no {
+    background: #36404e;
+    color: #fff;
+    string-set: chapter content();
+    float: right;
+    width: 2cm;
+    height: 2cm;
+    line-height: 2cm;
+    font-size: 1.2cm;
+    text-align: center;
+    margin: 0 0 1cm 1cm; }
+    @media print {
+      .typo .chapter-no {
+        background: #000; } }
+    .typo .chapter-no:after {
+      display: table;
+      content: '';
+      clear: both; }
 
 .browser-content {
   color: #000;

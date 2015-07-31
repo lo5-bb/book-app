@@ -33,7 +33,7 @@ class app
 
 		$i = 1;
 		foreach ($files as $file) {
-			$fileData = '  ' . trim(file_get_contents($file)) . '  ';
+			$fileData = "\n\n" . trim(file_get_contents($file)) . "\n\n";
 			$html = self::parseMarkdown($fileData);
 			$html = self::generateHeaders($html);
 			$html = self::generateBrowser($html);

@@ -37,7 +37,7 @@ body {
 	@media print {
 		background: transparent;
 		color: #000;
-		font-size: 11pt;
+		font-size: 9pt;
 	}
 }
 
@@ -75,7 +75,7 @@ aside {
 }
 
 @page {
-	size: C5;
+	size: 170mm 245mm;
 	//marks: crop cross;
 	//prince-bleed: 3mm;
 	//prince-mark-length: 6mm;

@@ -328,7 +328,7 @@
 	.browser {
 		background: #f0f0f0;
 		border-radius: 5px;
-		margin: 0 1em 2em;
+		margin: 0 0 2em;
 		padding: 3px;
 		page-break-inside: avoid;
 	}
@@ -421,6 +421,7 @@
 		background: #fff;
 		min-height: 150px;
 		padding: 10px;
+		overflow: hidden;
 	}
 
 

@@ -403,6 +403,8 @@ aside {
   font-family: 'Times New Roman', serif;
   font-size: 14px;
   line-height: normal; }
+  .browser-content > *:first-child {
+    margin-top: 0; }
   .browser-content h1, .browser-content h2, .browser-content h3, .browser-content h4, .browser-content h5, .browser-content h6 {
     font-family: inherit;
     font-weight: bold; }
@@ -423,6 +425,8 @@ aside {
   .browser-content hr {
     margin: .5em 0;
     border-top: 1px solid #999; }
+  .browser-content dd {
+    margin-left: 2em; }
 
 ul.toc {
   list-style: none;

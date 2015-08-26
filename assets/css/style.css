@@ -87,6 +87,9 @@ aside {
 .chapter {
   page-break-before: right; }
 
+body {
+  counter-reset: homework; }
+
 .typo {
   position: relative; }
   .typo h1:first-of-type {
@@ -291,6 +294,9 @@ aside {
       -webkit-break-after: avoid;
          -moz-break-after: avoid;
               break-after: avoid; }
+    .typo .box.homework:before {
+      counter-increment: homework;
+      content: attr(data-label) ' ' counter(homework); }
     .typo .box:after {
       content: '';
       display: block;

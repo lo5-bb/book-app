@@ -1,3 +1,7 @@
+body {
+	counter-reset: homework;
+}
+
 .typo {
 
 	position: relative;
@@ -292,6 +296,12 @@
 			font-weight: 700;
 			margin-bottom: 8px;
 			break-after: avoid;
+		}
+
+		&.homework:before {
+			counter-increment: homework;
+
+			content: attr(data-label) ' ' counter(homework);
 		}
 
 		&:after {

@@ -141,7 +141,7 @@ class app
 			for ($i = 0; $i < count($m[0]); $i++) {
 				$headers[] = [
 					'no' => $m[1][$i],
-					'text' => $m[3][$i],
+					'text' => strip_tags($m[3][$i], '<code>'),
 					'url' => $m[2][$i]
 				];
 			}

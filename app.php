@@ -35,8 +35,9 @@ class app
 		foreach ($files as $file) {
 			$fileData = "\n\n" . trim(file_get_contents($file)) . "\n\n";
 			$html = self::parseMarkdown($fileData);
-			$html = self::generateHeaders($html);
 			$html = self::generateBrowser($html);
+			$html = self::generateHeaders($html);
+			$html = self::generateBrowserDecode($html);
 			$data .= '<section class="chapter"><div class="chapter-no">'.$i++.'</div>' . $html . '</section>' . "\n\n";
 		}
 
@@ -160,10 +161,17 @@ class app
 
 	private static function generateBrowser($code) {
 
-		$code = preg_replace('/<browser\s+url=(["\'])([^"]+)\\1>/',
-			'<div class="browser" id="code-$2"><div class="browser-top"><div class="browser-left"><div class="browser-prev"></div><div class="browser-next"></div><div class="browser-refresh"></div></div><div class="browser-right"><div class="browser-mini"></div><div class="browser-maxi"></div><div class="browser-close"></div></div><div class="browser-url"><div class="browser-url-world"></div>'.self::getCodeUrl('$2').'</div></div><div class="browser-content">', $code);
-		$code = preg_replace('/<\/browser>/', "</div>\n</div>", $code);
+		$code = preg_replace_callback('/<browser\s+url=(["\'])([^"]+)\\1>(.*?)<\/browser>/siu', function($m){
+			return '<browser url="'.$m[2].'">'.htmlspecialchars($m[3]).'</browser>';
+		}, $code);
 
+		return $code;
+	}
+
+	private static function generateBrowserDecode($code) {
+		$code = preg_replace_callback('/<browser\s+url=(["\'])([^"]+)\\1>(.*?)<\/browser>/siu', function($m){
+			return '<div class="browser" id="code-'.$m[2].'"><div class="browser-top"><div class="browser-left"><div class="browser-prev"></div><div class="browser-next"></div><div class="browser-refresh"></div></div><div class="browser-right"><div class="browser-mini"></div><div class="browser-maxi"></div><div class="browser-close"></div></div><div class="browser-url"><div class="browser-url-world"></div>'.self::getCodeUrl($m[2]).'</div></div><div class="browser-content">'.htmlspecialchars_decode($m[3]).'</div></div>';
+		}, $code);
 
 		return $code;
 	}

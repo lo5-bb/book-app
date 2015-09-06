@@ -433,6 +433,14 @@ body {
     border-top: 1px solid #999; }
   .browser-content dd {
     margin-left: 2em; }
+  .browser-content table {
+    width: auto; }
+    .browser-content table td, .browser-content table th {
+      border: 0;
+      padding: 2px;
+      background: transparent; }
+    .browser-content table.table-border th, .browser-content table.table-border td {
+      border: 1px solid #999; }
 
 ul.toc {
   list-style: none;

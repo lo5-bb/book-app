@@ -505,6 +505,22 @@ body {
 	dd {
 		margin-left: 2em;
 	}
+
+	table {
+		width: auto;
+
+		td, th {
+			border: 0;
+			padding: 2px;
+			background: transparent;
+		}
+
+		&.table-border {
+			th, td {
+				border: 1px solid #999;
+			}
+		}
+	}
 }
 
 

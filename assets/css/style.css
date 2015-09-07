@@ -408,7 +408,7 @@ body {
     .typo .table-selectors p:last-child, .typo .table-selectors pre:last-child {
       margin-bottom: 0; }
   .typo .table-selectors td {
-    padding: 20px;
+    padding: 1em;
     width: 50%;
     vertical-align: top; }
   .typo .table-selectors .selectors-example {

@@ -403,6 +403,34 @@ body {
       display: table;
       content: '';
       clear: both; }
+  .typo .table-selectors p, .typo .table-selectors pre {
+    margin: 0 0 1em; }
+    .typo .table-selectors p:last-child, .typo .table-selectors pre:last-child {
+      margin-bottom: 0; }
+  .typo .table-selectors td {
+    padding: 20px;
+    width: 50%;
+    vertical-align: top; }
+  .typo .table-selectors .selectors-example {
+    margin: 0 0 1.65em;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    text-align: center; }
+    .typo .table-selectors .selectors-example li {
+      display: inline-block;
+      margin: 0 8px 0 0;
+      width: 1.6em;
+      height: 1.6em;
+      border: 1px solid #36404e;
+      font-size: 1.2em;
+      line-height: 1.4em;
+      text-align: center;
+      border-radius: 50%;
+      vertical-align: middle; }
+      .typo .table-selectors .selectors-example li.selected {
+        background: #36404e;
+        color: #fff;
+        font-weight: bold; }
 
 .browser-content {
   color: #000;

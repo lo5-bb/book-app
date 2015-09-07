@@ -483,7 +483,7 @@ class ParsedownExtra extends Parsedown
 
 			$DOMDocument->documentElement->removeAttribute('markdown');
 
-			$elementText = "\n".$this->text($elementText)."\n";
+			$elementText = "\n".$this->text(htmlspecialchars_decode($elementText))."\n";
 		}
 		else
 		{

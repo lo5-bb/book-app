@@ -1,11 +1,9 @@
 <?php
 
-class Parsedown_Extension extends Parsedown
+class Parsedown_Extension extends ParsedownExtra
 {
 	public function __construct()
 	{
-
-
 		$this->BlockTypes['('] [] = 'Snippet';
 		$this->BlockTypes['/'] [] = 'Todo';
 		array_unshift($this->BlockTypes['>'], 'SpecialQuote');

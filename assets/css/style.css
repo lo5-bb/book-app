@@ -434,7 +434,9 @@ body {
   .browser-content dd {
     margin-left: 2em; }
   .browser-content table {
-    width: auto; }
+    width: auto;
+    margin: 0;
+    border-collapse: separate; }
     .browser-content table td, .browser-content table th {
       border: 0;
       padding: 2px;

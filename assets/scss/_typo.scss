@@ -508,6 +508,8 @@ body {
 
 	table {
 		width: auto;
+		margin: 0;
+		border-collapse: separate;
 
 		td, th {
 			border: 0;

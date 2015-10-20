@@ -113,7 +113,7 @@ body {
 				&:before {
 					display: block;
 					position: absolute;
-					top: 16px;
+					top: 11px;
 					right: -8px;
 					background: #ddd;
 					color: #333;
@@ -137,10 +137,12 @@ body {
 
 	img {
 		max-width: 100%;
+		display: block;
 	}
 
-	>img {
-		margin: 2em 0;
+	p>img:only-child {
+		margin: 3em auto;
+		max-width: 500px;
 	}
 
 	>img,

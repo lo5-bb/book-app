@@ -72,10 +72,11 @@ class app
 	{
 
 		$Parsedown = new Parsedown_Extension();
+		$Parsedown->setUrlsLinked(false);
 
 		$text = $data;
 
-		$text = self::formatCharacters($text);
+		//$text = self::formatCharacters($text);
 		$text = $Parsedown->text($text);
 		$text = self::formatSingleCharacters($text);
 

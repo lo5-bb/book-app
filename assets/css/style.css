@@ -532,6 +532,8 @@ ul.toc {
   ul.toc li {
     padding: 0;
     margin: 0; }
+    ul.toc li.strong {
+      font-weight: bold; }
     ul.toc li:after {
       content: leader(".") target-counter(attr(href), page); }
   ul.toc a {

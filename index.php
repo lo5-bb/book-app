@@ -26,18 +26,26 @@ $data = app::getContent();
 		<?= $data['html'] ?>
 
 		<section class="menu">
+			<h1>Spis elementów</h1>
+			<h2>HTML</h2>
+			<ul class="toc">
+				<li href="#html-a"><a href="#html-a"><code>&lt;a&gt;</code></a></li>
+				<li><code>&lt;strong&gt;</code></li>
+				<li><code>&lt;strike&gt;</code></li>
+			</ul>
+			<h2>CSS</h2>
+			<ul class="toc">
+				<li><a><code>border-color</code></a></li>
+				<li><code>background-color</code></li>
+			</ul>
+		</section>
+		<section class="menu">
 			<h1>Spis treści</h1>
 			<ul class="toc">
 				<? foreach($data['menu'] as $item): ?>
 					<? if($item['no'] <= 3): ?>
-						<li href="#<?= $item['url'] ?>"><a href="#<?= $item['url'] ?>"><?= str_repeat('&nbsp;', ($item['no'] - 1) * 7) ?>
-						<? if($item['no'] == 1): ?>
-							<strong>
-						<? endif; ?>
-						<?= $item['text'] ?>
-						<? if($item['no'] == 1): ?>
-							</strong>
-						<? endif; ?>
+						<li href="#<?= $item['url'] ?>" class="<? if($item['no'] == 1): ?>strong<? endif; ?>"><a href="#<?= $item['url'] ?>"><?= str_repeat('&nbsp;', ($item['no'] - 1) * 7) ?>
+							<?= $item['text'] ?>
 						</a>
 						</li>
 					<? endif; ?>

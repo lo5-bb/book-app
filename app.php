@@ -14,7 +14,7 @@ class app
 	 */
 	public static function getFilesList()
 	{
-		return glob('book/*.md');
+		return json_decode(file_get_contents('book/menu.json'), true);
 	}
 
 	private static function getCodeUrl($code) {
@@ -32,13 +32,22 @@ class app
 		$data = '';
 
 		$i = 1;
-		foreach ($files as $file) {
-			$fileData = "\n\n" . trim(file_get_contents($file)) . "\n\n";
+		foreach ($files as $chapter) {
+			$fileData = "\n\n" . trim(file_get_contents('book/'.$chapter['file'])) . "\n\n";
 			$html = self::parseMarkdown($fileData);
 			$html = self::generateBrowser($html);
 			$html = self::generateHeaders($html);
 			$html = self::generateBrowserDecode($html);
-			$data .= '<section class="chapter"><div class="chapter-no">'.$i++.'</div>' . $html . '</section>' . "\n\n";
+
+
+			$data .= '<section class="chapter">';
+
+			if(!empty($chapter['chapter'])) {
+				$data .= '<div class="chapter-no">' . $chapter['chapter'] . '</div>';
+			}
+
+			$data .= $html;
+			$data .= '</section>' . "\n\n";
 		}
 
 		$menu = self::generateTOC($data);

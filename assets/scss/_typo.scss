@@ -176,23 +176,23 @@ body {
 
 	.snippet {
 		float: right;
-		border-top: 1px solid #ddd;
-		border-bottom: 1px solid #ddd;
-		padding: 21px;
+		border: 1px solid #ddd;
+		padding: 1em;
 		margin: .6em 0 .25em 2em;
-		line-height: 30px;
+		line-height: 1.4em;
 		color: #666;
 		font-family: $font-sans;
 
 		&:before {
 			float: right;
-			content: '\e031';
-			font-family: $font-icons;
+			content: '';
 			color: rgba(0, 0, 0, .4);
-			font-size: 30px;
+			height: 1.3em;
+			width: 1.3em;
+			background: url(../svg/e031.svg);
+			background-size: 100%;
 			vertical-align: middle;
 			margin: 0 0 0 16px;
-			font-weight: normal;
 		}
 	}
 
@@ -277,9 +277,9 @@ body {
 	.box {
 		border-left: none;
 		position: relative;
-		border-top: 1px solid #ddd;
-		border-bottom: 1px solid #ddd;
-		padding: 20px 0 20px 80px;
+		border-top: 1px solid #cdcdcd;
+		border-bottom: 1px solid #cdcdcd;
+		padding: 1em 0 1em 5em;
 		margin: 3em 0;
 		color: #666;
 		font-style: normal;
@@ -296,13 +296,12 @@ body {
 			display: block;
 			text-transform: uppercase;
 			font-weight: 700;
-			margin-bottom: 8px;
+			margin-bottom: .2em;
 			break-after: avoid;
 		}
 
 		&.homework:before {
 			counter-increment: homework;
-
 			content: attr(data-label) ' ' counter(homework);
 		}
 
@@ -310,28 +309,27 @@ body {
 			content: '';
 			display: block;
 			position: absolute;
-			left: 16px;
-			top: 12px;
-			font-size: 40px;
-			font-family: $font-icons;
-			font-style: normal;
-			color: rgba(0, 0, 0, .2);
+			left: 1em;
+			top: 1em;
+			width: 2.6em;
+			height: 2.6em;
+			background-size: 100%;
 		}
 
 		&.warning:after {
-			content: '\e01c';
+			background-image: url(../svg/e01c.svg);
 		}
 
 		&.tip:after {
-			content: '\e076';
+			background-image: url(../svg/e076.svg);
 		}
 
 		&.question:after {
-			content: '\e019';
+			background-image: url(../svg/e019.svg);
 		}
 
 		&.homework:after {
-			content: '\e013';
+			background-image: url(../svg/e04c.svg);
 		}
 	}
 

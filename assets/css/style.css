@@ -334,9 +334,10 @@ body {
   .typo .browser {
     background: #f0f0f0;
     border-radius: 5px;
-    margin: 0 0 2em;
+    margin: 0 auto 2em;
     padding: 3px;
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+    max-width: 475px; }
   .typo .browser-top {
     padding: 7px; }
   .typo .browser-url {
@@ -488,6 +489,9 @@ body {
       background: transparent; }
     .browser-content table.table-border th, .browser-content table.table-border td {
       border: 1px solid #999; }
+  .browser-content p > img:only-child {
+    margin: 0;
+    max-width: none; }
 
 ul.toc {
   list-style: none;

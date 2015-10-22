@@ -2,6 +2,8 @@ body {
 	counter-reset: homework;
 }
 
+
+
 .typo {
 
 	position: relative;
@@ -480,7 +482,11 @@ body {
 	}
 
 
-
+	.url-preview {
+		text-align: center;
+		font-style: italic;
+		font-size: 1.3em;
+	}
 
 
 	.table-selectors {

@@ -30,7 +30,7 @@ body {
   orphans: 2; }
   @media print {
     body {
-      background: transparent;
+      background: none;
       color: #000;
       font-size: 9pt; } }
 
@@ -49,10 +49,12 @@ body {
   background: #fff;
   border: 1px solid #ddd;
   padding: 16mm;
-  margin: 0 0 128px; }
+  margin: 0 0 128px;
+  page-break-after: right; }
   @media print {
     .chapter,
     .menu {
+      background: none;
       border: 0;
       padding: 0;
       margin: 0; } }
@@ -61,7 +63,8 @@ aside {
   float: left; }
 
 @page {
-  size: 170mm 245mm; }
+  size: 170mm 245mm;
+  prince-bleed: 5mm; }
 
 @page :left {
   margin: 16mm 26mm 16mm 16mm;
@@ -80,14 +83,23 @@ aside {
     font-size: 10pt; } }
 
 @page clean {
-  @bottom-center {
-    content: normal; } }
+  @bottom-left {
+    content: none; }
+  @bottom-right {
+    content: none; } }
+
+.introduction {
+  page: introduction;
+  page-break-after: right; }
+
+@page :blank {
+  @bottom-left {
+    content: none; }
+  @bottom-right {
+    content: none; } }
 
 .menu {
   page: clean; }
-
-.chapter {
-  page-break-before: right; }
 
 body {
   counter-reset: homework; }
@@ -288,7 +300,7 @@ body {
   .typo .box {
     border-left: none;
     position: relative;
-    border-top: 1p solid #cdcdcd;
+    border-top: 1px solid #cdcdcd;
     border-bottom: 1px solid #cdcdcd;
     padding: 1em 0 1em 5em;
     margin: 3em 0;
@@ -438,6 +450,10 @@ body {
       display: table;
       content: '';
       clear: both; }
+  .typo .url-preview {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3em; }
   .typo .table-selectors p, .typo .table-selectors pre {
     margin: 0 0 1em; }
     .typo .table-selectors p:last-child, .typo .table-selectors pre:last-child {

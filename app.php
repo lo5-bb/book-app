@@ -33,17 +33,36 @@ class app
 
 		$i = 1;
 		foreach ($files as $chapter) {
+			$intro = '';
+			$i++;
+
 			$fileData = "\n\n" . trim(file_get_contents('book/'.$chapter['file'])) . "\n\n";
+
+			if(!empty($chapter['intro'])) {
+				$introData = "\n\n" . trim(file_get_contents('book/'.$chapter['intro'])) . "\n\n";
+				$intro = self::parseMarkdown($introData);
+				$intro = self::generateHeaders($intro, $i);
+			}
+
 			$html = self::parseMarkdown($fileData);
 			$html = self::generateBrowser($html);
-			$html = self::generateHeaders($html);
+			$html = self::generateHeaders($html, $i);
 			$html = self::generateBrowserDecode($html);
 
+			$data .= '<!-- '.$chapter['file'].' -->'."\n\n";
+			$data .= '<section class="chapter">'. "\n\n";
 
-			$data .= '<section class="chapter">';
+			if(!empty($chapter['intro'])) {
+				$data .= '<div class="introduction">'. "\n";
+			}
 
 			if(!empty($chapter['chapter'])) {
-				$data .= '<div class="chapter-no">' . $chapter['chapter'] . '</div>';
+				$data .= '<div class="chapter-no">' . $chapter['chapter'] . '</div>'. "\n";
+			}
+
+			if(!empty($chapter['intro'])) {
+				$data .= $intro. "\n";
+				$data .= '</div>'. "\n\n";
 			}
 
 			$data .= $html;
@@ -161,9 +180,9 @@ class app
 		return $headers;
 	}
 
-	private static function generateHeaders($code) {
+	private static function generateHeaders($code, $i) {
 		$code = preg_replace_callback('/<h([1-6])>(.*?)<\/h\\1>/si', function($m){
-			return '<h'.$m[1].' id="'.self::urlTitle($m[2]).'">'.$m[2].'</h'.$m[1].'>';
+			return '<h'.$m[1].' id="'.self::urlTitle($m[2]).'-'.substr(md5(rand()), 0, 7).'">'.$m[2].'</h'.$m[1].'>';
 		}, $code);
 
 		return $code;

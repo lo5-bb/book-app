@@ -23,18 +23,27 @@ $data = app::getContent();
 
 	<main class="book typo">
 
+		<?= $data['html'] ?>
+
 		<section class="menu">
-			<h1>Menu</h1>
+			<h1>Spis treści</h1>
 			<ul class="toc">
 				<? foreach($data['menu'] as $item): ?>
 					<? if($item['no'] <= 3): ?>
-						<li href="#<?= $item['url'] ?>"><a href="#<?= $item['url'] ?>"><?= str_repeat('&nbsp;', ($item['no'] - 1) * 7) ?><?= $item['text'] ?></a></li>
+						<li href="#<?= $item['url'] ?>"><a href="#<?= $item['url'] ?>"><?= str_repeat('&nbsp;', ($item['no'] - 1) * 7) ?>
+						<? if($item['no'] == 1): ?>
+							<strong>
+						<? endif; ?>
+						<?= $item['text'] ?>
+						<? if($item['no'] == 1): ?>
+							</strong>
+						<? endif; ?>
+						</a>
+						</li>
 					<? endif; ?>
 				<? endforeach; ?>
 			</ul>
 		</section>
-
-		<?= $data['html'] ?>
 
 	</main>
 

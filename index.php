@@ -27,7 +27,9 @@ $data = app::getContent();
 			<h1>Menu</h1>
 			<ul class="toc">
 				<? foreach($data['menu'] as $item): ?>
-					<li href="#<?= $item['url'] ?>"><a href="#<?= $item['url'] ?>"><?= str_repeat('&nbsp;', ($item['no'] - 1) * 7) ?><?= $item['text'] ?></a></li>
+					<? if($item['no'] <= 3): ?>
+						<li href="#<?= $item['url'] ?>"><a href="#<?= $item['url'] ?>"><?= str_repeat('&nbsp;', ($item['no'] - 1) * 7) ?><?= $item['text'] ?></a></li>
+					<? endif; ?>
 				<? endforeach; ?>
 			</ul>
 		</section>

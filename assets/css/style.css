@@ -144,13 +144,13 @@ body {
     padding: 0.2em 0.5em;
     margin: 0;
     font-size: 85%;
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: #E6E6E6;
     border-radius: 3px; }
   .typo pre {
     border-radius: 3px;
     font-family: Monaco, MonacoRegular, "Courier New", monospace;
-    background-color: rgba(0, 0, 0, 0.04);
-    color: #333;
+    background-color: #E6E6E6;
+    color: #222;
     margin-bottom: 2.28571em;
     margin-top: 2.28571em;
     padding: 16px;

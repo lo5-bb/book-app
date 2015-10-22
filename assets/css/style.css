@@ -175,7 +175,7 @@ body {
         position: absolute;
         top: 11px;
         right: -8px;
-        background: #ddd;
+        background: #cdcdcd;
         color: #333;
         line-height: 1;
         padding: 8px 16px 8px 8px;
@@ -332,75 +332,93 @@ body {
     .typo .box.homework:after {
       content: '\e013'; }
   .typo .browser {
-    background: #f0f0f0;
+    background: #E6E6E6;
     border-radius: 5px;
     margin: 0 auto 2em;
     padding: 3px;
     page-break-inside: avoid;
-    max-width: 475px; }
+    max-width: 480px; }
   .typo .browser-top {
-    padding: 7px; }
+    padding: 3px 3px 5px;
+    line-height: 16px; }
   .typo .browser-url {
     background: #fff;
-    font-size: 11px;
-    line-height: 24px;
+    font-size: 9px;
+    line-height: 12px;
     font-family: 'Lato', sans-serif;
     padding: 3px;
     border-radius: 3px;
-    color: #666;
-    margin: 0 100px; }
+    color: #999;
+    margin: 0 30px 0 70px; }
   .typo .browser-left,
   .typo .browser-right {
     float: left;
-    padding: 3px;
-    height: 32px; }
+    padding: 0 3px 0 10px;
+    height: 16px; }
+    .typo .browser-left span,
+    .typo .browser-right span {
+      width: 9px;
+      height: 9px;
+      display: inline-block;
+      background: #CDCDCD;
+      margin-right: 8px;
+      border-radius: 50%; }
   .typo .browser-right {
-    float: right; }
+    float: right;
+    padding-top: 0; }
   .typo .browser-url-world {
     background: url(../svg/world.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     float: left;
     margin-right: 8px; }
   .typo .browser-url-hamburger {
     background: url(../svg/hamburger.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 22px;
+    height: 20px;
     float: right;
     margin-left: 8px; }
   .typo .browser-prev {
     background: url(../svg/prev.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     display: inline-block; }
   .typo .browser-next {
     background: url(../svg/next.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     display: inline-block; }
   .typo .browser-refresh {
     background: url(../svg/refresh.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     display: inline-block; }
   .typo .browser-mini {
     background: url(../svg/mini.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     display: inline-block; }
   .typo .browser-maxi {
     background: url(../svg/maxi.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     display: inline-block; }
   .typo .browser-close {
     background: url(../svg/close.svg) no-repeat center;
-    width: 26px;
-    height: 26px;
+    background-size: 100%;
+    width: 13px;
+    height: 13px;
     display: inline-block; }
   .typo .browser-content {
     background: #fff;
-    min-height: 150px;
+    min-height: 120px;
     padding: 10px;
     overflow: hidden; }
   .typo .chapter-no {

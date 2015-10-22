@@ -171,7 +171,7 @@ class app
 
 	private static function generateBrowserDecode($code) {
 		$code = preg_replace_callback('/<browser\s+url=(["\'])([^"]+)\\1>(.*?)<\/browser>/siu', function($m){
-			return '<div class="browser" id="code-'.$m[2].'"><div class="browser-top"><div class="browser-left"><div class="browser-prev"></div><div class="browser-next"></div><div class="browser-refresh"></div></div><div class="browser-right"><div class="browser-mini"></div><div class="browser-maxi"></div><div class="browser-close"></div></div><div class="browser-url"><div class="browser-url-world"></div>'.self::getCodeUrl($m[2]).'</div></div><div class="browser-content">'.htmlspecialchars_decode($m[3]).'</div></div>';
+			return '<div class="browser" id="code-'.$m[2].'"><div class="browser-top"><div class="browser-left"><span></span><span></span><span></span></div><div class="browser-right"><div class="browser-url-hamburger"></div></div><div class="browser-url"><div class="browser-url-world"></div>'.self::getCodeUrl($m[2]).'</div></div><div class="browser-content">'.htmlspecialchars_decode($m[3]).'</div></div>';
 		}, $code);
 
 		return $code;

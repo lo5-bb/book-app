@@ -183,7 +183,7 @@ class app
 	}
 
 	private static function generateHeaders($code, $i) {
-		$code = preg_replace_callback('/<h([1-6])>(.*?)<\/h\\1>/si', function($m){
+		$code = preg_replace_callback('/<h([1-6])>(.*?)<\/h\\1>/i', function($m){
 			return '<h'.$m[1].' id="'.self::urlTitle($m[2]).'-'.substr(md5(rand()), 0, 7).'">'.$m[2].'</h'.$m[1].'>';
 		}, $code);
 
@@ -213,15 +213,15 @@ class app
 			'css' => []
 		];
 
-		$data = preg_replace_callback('#<!--\s+(HTML|CSS):\s+<?([a-z\-\s,]+)>?\s+-->#si', function($m) use (&$elements) {
+		$data = preg_replace_callback('#<!--\s+(HTML|CSS):\s+([<>\!a-z1-9\-\s,]+)\s+-->#i', function($m) use (&$elements) {
 			$els = explode(',', $m[2]);
 			$html = '';
 			foreach($els as $el) {
-				$elName = strtolower(trim($el));
+				$elName = trim($el, '<> ');
 
 				$elements[strtolower($m[1])][$elName] = $elName;
 
-				$html .= '<span id="element-'.strtolower($m[1]).'-'.strtolower($elName).'"></span>';
+				$html .= '<div id="element-'.strtolower($m[1]).'-'.str_replace('!', '-', $elName).'"></div>';
 			}
 
 			return $html;

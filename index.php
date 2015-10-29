@@ -29,17 +29,17 @@ $data = app::getContent();
 			<h1>Spis elementów</h1>
 
 			<h2>HTML</h2>
-			<ul class="toc">
+			<ul class="toc toc-2">
 			<? foreach($data['elements']['html'] as $item): ?>
-				<li href="#element-html-<?= $item ?>"><a href="#element-html-<?= $item ?>"><code>&lt;<?= $item ?>&gt;</code></a></li>
+				<li href="#element-html-<?= str_replace('!', '-', $item) ?>"><a href="#element-html-<?= urlencode($item) ?>"><code>&lt;<?= $item ?>&gt;</code></a></li>
 			<? endforeach; ?>
 			</ul>
 
 
 			<h2>CSS</h2>
-			<ul class="toc">
+			<ul class="toc toc-2">
 			<? foreach($data['elements']['css'] as $item): ?>
-				<li href="#element-css-<?= $item ?>"><a href="#element-css-<?= $item ?>"><code><?= $item ?></code></a></li>
+				<li href="#element-css-<?= str_replace('!', '-', $item) ?>"><a href="#element-css-<?= urlencode($item) ?>"><code><?= $item ?></code></a></li>
 			<? endforeach; ?>
 			</ul>
 		</section>

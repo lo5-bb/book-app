@@ -629,5 +629,9 @@ ul.toc {
 		background: none;
 		padding: 0;
 	}
+
+	&.toc-2 {
+		column-count: 2;
+	}
 }
 

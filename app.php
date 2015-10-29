@@ -69,11 +69,13 @@ class app
 			$data .= '</section>' . "\n\n";
 		}
 
+		$elements = self::generateElementsList($data);
 		$menu = self::generateTOC($data);
 
 		return array(
 			'html' => $data,
-			'menu' => $menu
+			'menu' => $menu,
+			'elements' => $elements
 		);
 	}
 
@@ -203,6 +205,33 @@ class app
 		}, $code);
 
 		return $code;
+	}
+
+	private static function generateElementsList(&$data) {
+		$elements = [
+			'html' => [],
+			'css' => []
+		];
+
+		$data = preg_replace_callback('#<!--\s+(HTML|CSS):\s+<?([a-z\-\s,]+)>?\s+-->#si', function($m) use (&$elements) {
+			$els = explode(',', $m[2]);
+			$html = '';
+			foreach($els as $el) {
+				$elName = strtolower(trim($el));
+
+				$elements[strtolower($m[1])][$elName] = $elName;
+
+				$html .= '<span id="element-'.strtolower($m[1]).'-'.strtolower($elName).'"></span>';
+			}
+
+			return $html;
+		}, $data);
+
+		foreach($elements as &$category) {
+			ksort($category);
+		}
+
+		return $elements;
 	}
 
 

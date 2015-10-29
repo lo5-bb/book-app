@@ -27,16 +27,20 @@ $data = app::getContent();
 
 		<section class="menu">
 			<h1>Spis elementów</h1>
+
 			<h2>HTML</h2>
 			<ul class="toc">
-				<li href="#html-a"><a href="#html-a"><code>&lt;a&gt;</code></a></li>
-				<li><code>&lt;strong&gt;</code></li>
-				<li><code>&lt;strike&gt;</code></li>
+			<? foreach($data['elements']['html'] as $item): ?>
+				<li href="#element-html-<?= $item ?>"><a href="#element-html-<?= $item ?>"><code>&lt;<?= $item ?>&gt;</code></a></li>
+			<? endforeach; ?>
 			</ul>
+
+
 			<h2>CSS</h2>
 			<ul class="toc">
-				<li><a><code>border-color</code></a></li>
-				<li><code>background-color</code></li>
+			<? foreach($data['elements']['css'] as $item): ?>
+				<li href="#element-css-<?= $item ?>"><a href="#element-css-<?= $item ?>"><code><?= $item ?></code></a></li>
+			<? endforeach; ?>
 			</ul>
 		</section>
 		<section class="menu">
